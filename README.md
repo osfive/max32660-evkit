@@ -1,4 +1,4 @@
-# max326600-evkit
+# max32660-evkit
 
 This example initializes UART and drives on-board LED.
 
@@ -14,15 +14,15 @@ UART baud rate: 115200
 ### Build under Linux
 
     $ export CROSS_COMPILE=arm-none-eabi-
-    $ git clone --recursive https://github.com/osfive/max326600-evkit
-    $ cd max326600-evkit
+    $ git clone --recursive https://github.com/osfive/max32660-evkit
+    $ cd max32660-evkit
     $ bmake
 
 ### Build under FreeBSD
 
     $ setenv CROSS_COMPILE arm-none-eabi-
-    $ git clone --recursive https://github.com/osfive/max326600-evkit
-    $ cd max326600-evkit
+    $ git clone --recursive https://github.com/osfive/max32660-evkit
+    $ cd max32660-evkit
     $ make
 
-![alt text](https://raw.githubusercontent.com/osfive/max326600-evkit/master/images/max326600-evkit.jpg)
+![alt text](https://raw.githubusercontent.com/osfive/max32660-evkit/master/images/max32660-evkit.jpg)
