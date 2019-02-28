@@ -18,19 +18,16 @@ OBJECTS =	main.o						\
 		osfive/sys/kern/kern_panic.o			\
 		start.o
 
-.include "osfive/lib/libc/Makefile.inc"
-.include "osfive/lib/libaeabi/Makefile.inc"
+LIBRARIES =	LIBC LIBAEABI
 
 CFLAGS =	-mthumb -mcpu=cortex-m4		\
 		-nostdlib -fno-builtin-printf	\
 		-g -Wall -Werror
 
-all:	compile link binary
+all:	__compile __link __binary
 
-clean:
-	rm -f ${OBJECTS:M*} ${APP}.elf
+clean:	__clean
 
-.include "osfive/mk/user.mk"
-.include "osfive/mk/compile.mk"
-.include "osfive/mk/link.mk"
-.include "osfive/mk/binutils.mk"
+.include "osfive/lib/libaeabi/Makefile.inc"
+.include "osfive/lib/libc/Makefile.inc"
+.include "osfive/mk/bsd.mk"
